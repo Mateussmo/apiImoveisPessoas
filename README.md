@@ -1,4 +1,4 @@
-# apiPessoasImoveis
+# apiImoveisPessoas
 
 Api feita em Node.js com o PostgreSQL
 
