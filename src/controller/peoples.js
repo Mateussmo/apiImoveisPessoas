@@ -12,6 +12,7 @@ module.exports = {
       state,
       city
     } = req.body;
+    let userID = req.userId;
     try {
       let newPeople = await People.create(
         {
@@ -22,7 +23,8 @@ module.exports = {
           phone,
           street,
           state,
-          city
+          city,
+          userID
         },
         {
           fields: [
@@ -33,7 +35,8 @@ module.exports = {
             "phone",
             "street",
             "state",
-            "city"
+            "city",
+            "userID"
           ]
         }
       );

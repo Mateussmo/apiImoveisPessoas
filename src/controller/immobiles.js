@@ -1,4 +1,5 @@
 const Immobiles = require("../models/immobiles");
+const ImmobilesPeoples = require("../controller/immobilesPeoples");
 
 module.exports = {
   async store(req, res) {
@@ -16,6 +17,7 @@ module.exports = {
       neighborhood,
       state
     } = req.body;
+    let peoplesID = req.body.peoplesID;
     try {
       let newImmobiles = await Immobiles.create(
         {
@@ -50,22 +52,19 @@ module.exports = {
         }
       );
       if (newImmobiles) {
-        res.json({
-          result: "ok",
-          data: newImmobiles
-        });
+        ImmobilesPeoples.store(peoplesID, res, newImmobiles.id);
       } else {
         res.json({
           result: "failed",
           data: {},
-          message: "Falha ao Cadastrar Imóvel"
+          message: "Falha ao Cadastrar ImóvelPeople"
         });
       }
     } catch (err) {
       res.json({
         result: "failed",
         data: {},
-        message: `Falha ao Cadastrar Imóvel :${err}`
+        message: `Falha ao Cadastrar ImóvelPeople :${err}`
       });
     }
   },
@@ -85,6 +84,7 @@ module.exports = {
       neighborhood,
       state
     } = req.body;
+    let peoplesID = req.body.peoplesID;
     try {
       let immobiles = await Immobiles.findAll({
         attributes: [
@@ -106,6 +106,7 @@ module.exports = {
           id
         }
       });
+      console.log(immobiles[0].dataValues.id);
       if (immobiles.length > 0) {
         immobiles.forEach(async immobile => {
           await immobile.update({
@@ -125,11 +126,7 @@ module.exports = {
             state: state ? state : immobile.state
           });
         });
-        res.json({
-          result: "ok",
-          date: immobiles,
-          message: "Registro Atualizado!"
-        });
+        ImmobilesPeoples.store(peoplesID, res, immobiles[0].dataValues.id);
       } else {
         res.json({
           result: "Falha!",

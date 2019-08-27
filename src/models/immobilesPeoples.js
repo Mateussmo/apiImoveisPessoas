@@ -3,21 +3,18 @@ const sequelize = require("../database/database").sequelize;
 const Op = require("../database/database").Op;
 const bcrypt = require("bcryptjs");
 
-const Users = sequelize.define(
-  "users",
+const ImmobilesPeoples = sequelize.define(
+  "immobilesPeoples",
   {
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true
     },
-    name: {
-      type: Sequelize.STRING
+    immobilesID: {
+      type: Sequelize.INTEGER
     },
-    email: {
-      type: Sequelize.STRING
-    },
-    password: {
-      type: Sequelize.STRING
+    peoplesID: {
+      type: Sequelize.INTEGER
     }
   },
   {
@@ -25,4 +22,4 @@ const Users = sequelize.define(
   }
 );
 
-module.exports = Users;
+module.exports = ImmobilesPeoples;

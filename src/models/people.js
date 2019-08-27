@@ -33,6 +33,9 @@ const People = sequelize.define(
     },
     city: {
       type: Sequelize.STRING
+    },
+    userID: {
+      type: Sequelize.INTEGER
     }
   },
   {
