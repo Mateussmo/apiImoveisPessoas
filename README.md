@@ -8,6 +8,8 @@ Para rodar o server utilize _npm run dev_
 Foi criado um usuário no BD com o nome de Mateus, habilite para as tabelas criadas o acesso a esse usuário.
 
 _Para acesso ao banco de dados:_  
+_O arquivo nodeapi.sql é um backup do banco de dados._  
+
 _Nome do Database: nodeapi, senha: 1234_
 
 _Na pasta *imgs* no projeto possui imagens de testes realizados via postman._
