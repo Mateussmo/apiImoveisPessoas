@@ -32,11 +32,15 @@ _Rota:http://localhost:3001/register/authenticate_
 
 Após esse procedimento é gerado o token, salve o token é coloque no Header das próximas rotas. A imagem seguinte mostra como esse procedimento deve ser realizado.
 
-![autenticacao](https://user-images.githubusercontent.com/26530039/63639164-b65ca700-c666-11e9-9639-3ed96fea393a.png)
+
+![autenticacao](https://user-images.githubusercontent.com/26530039/63816539-f47bf400-c90e-11e9-8b8f-3c915aa64138.png)
+
+
 
 Com o token inserido no header, utilize o email e password, para se autenticar na API.
 
-![autenticacao1](https://user-images.githubusercontent.com/26530039/63639212-181d1100-c667-11e9-8bfd-c15782e4af79.png)
+![autenticacao1](https://user-images.githubusercontent.com/26530039/63816593-2beaa080-c90f-11e9-9b36-06c905165edc.png)
+
 
 # Cadastro de Pessoas
 
@@ -44,7 +48,8 @@ _Rota:http://localhost:3001/pessoas_
 
 _obs: Informe o token no header novamente._
 
-![pessoas](https://user-images.githubusercontent.com/26530039/63639322-1ef85380-c668-11e9-8450-e96d4444aab1.png)
+![pessoas](https://user-images.githubusercontent.com/26530039/63816643-5ccad580-c90f-11e9-8d09-d79946f6d34e.png)
+
 
 Com o Token no header, insira as informações da pessoa.  
 _As informações são:_  
@@ -56,7 +61,8 @@ _phone_:_string_
 _state_:_string_  
 _city_:_string_
 
-![pessoas1](https://user-images.githubusercontent.com/26530039/63639423-384dcf80-c669-11e9-9748-9d7c9bcbfdb5.png)
+![pessoas1](https://user-images.githubusercontent.com/26530039/63816628-4b81c900-c90f-11e9-9789-64da7700ad76.png)
+
 
 # Cadastro de Imóveis
 
@@ -64,11 +70,12 @@ _Rota:http://localhost:3001/imoveis_
 
 _obs: Informe o token no header novamente._
 
-![imoveis](https://user-images.githubusercontent.com/26530039/63639445-85ca3c80-c669-11e9-9c04-34069b4cd255.png)
+
 
 Após isso insira as informações de acordo a imagem abaixo.
 
-![imoveis1](https://user-images.githubusercontent.com/26530039/63639483-e8bbd380-c669-11e9-94ce-8f07bf80576b.png)  
+![imoveis](https://user-images.githubusercontent.com/26530039/63816664-73712c80-c90f-11e9-93f6-2a3e50f47c19.png)  
+
 _As informações e os seus tipos, são:_  
 _title_: _string_  
 _description_: _string_  
@@ -90,15 +97,22 @@ _Rota:http://localhost:3001/imoveis/IDIMOVEL_
 
 O procedimento é parecido com o cadastro de imóveis, somente algumas validações a mais foram implementadas.
 
-![Put_IMOVEIS](https://user-images.githubusercontent.com/26530039/63639556-06d60380-c66b-11e9-9d83-505aacbfcd81.png)
+![Put_IMOVEIS](https://user-images.githubusercontent.com/26530039/63816730-b16e5080-c90f-11e9-8a84-ccad724677b8.png)
+
 
 # Outras Rotas adicionadas
 
 _Rota - Get - Pessoas: http://localhost:3001/pessoas_
+  
+_Rota - Delete - Pessoas: http://localhost:3001/pessoas/IDPESSOAS_  
 
-_Rota - Get - Pelo id - Pessoas: http://localhost:3001/pessoas/IDPESSOAS_
+_Rota - PUT - Pessoas: http://localhost:3001/pessoas/IDPESSOAS_  
 
-_Rota - Get - Imoveis: http://localhost:3001/imoveis_
+_Rota - Get - IMOVEIS: http://localhost:3001/imoveis_
+  
+_Rota - Delete - Pessoas: http://localhost:3001/imoveis/IDIMOVEIS_  
+
+_Rota - PUT - Pessoas: http://localhost:3001/imoveis/IDIMOVEIS_  
 
 Com isso é criado o relacionamento entre as tabelas users e peoples(Salvando o ID do user em People) e também entre peoples e immobiles (Salvando o ID de uma ou mais peoples e do immobiles em uma nova tabela chamada immobilesPeoples).
 
