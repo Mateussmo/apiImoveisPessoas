@@ -30,7 +30,7 @@ Exemplo:
 
 _Rota:http://localhost:3001/register/authenticate_
 
-Após esse procedimento é gerado o token, salve o token é coloque no Header das próximas rotas. A imagem seguinte mostra como esse procedimento deve ser realizado.
+Após esse procedimento é gerado o token, salve o token e coloque no Header das próximas rotas. A imagem seguinte mostra como esse procedimento deve ser realizado.
 
 
 ![autenticacao](https://user-images.githubusercontent.com/26530039/63816539-f47bf400-c90e-11e9-8b8f-3c915aa64138.png)
