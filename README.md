@@ -19,7 +19,12 @@ _obs: O server está rodando na porta 3001._
 _Rota: http://localhost:3001/register_  
 O usuário primeiro deve se cadastrar na API. Para isso ele deve informar os seguintes campos: _name_, _email_ e _password_. Todos são strings. A senha do usuário é encriptada, para isso foi utilizado o Bcryptjs.
 
-![Registro](https://user-images.githubusercontent.com/26530039/63638937-962be880-c664-11e9-9ea8-a0d01047b167.png)
+Exemplo:  
+
+![Registro](https://user-images.githubusercontent.com/26530039/63816455-90593000-c90e-11e9-935d-fadc2ec92c0b.png)  
+
+
+
 
 # Autenticação do usuário
 
